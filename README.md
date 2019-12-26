@@ -1,4 +1,4 @@
-# scroller
+# inviewClass
 js scroll helper
 
 Drafting...
