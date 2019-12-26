@@ -5,14 +5,11 @@ Drafting...
 
 ## Overview
 - add class when item enter
-- toggle class when item enter/leave
-  - add class when item leave?
-  - adjust scroll offset
+  - add second class on defined interval
  
 ## Usage
 - init
-
-$('.your-item').inviewClass();
+$('.your-item').inviewClass('is-inview');
 
 
 
@@ -22,6 +19,7 @@ $('.your-item').inviewClass();
 - secondClassInterval
 
 $('.your-item').inviewClass({
+  className: 'is-inview' //set to change classname (optional)
   offset: 100, //px
   secondClassInterval: 1000 //ms
 });
