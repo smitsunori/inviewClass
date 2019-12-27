@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="jp">
+<head>
+  <meta charset="utf-8">
+  <title>inviewClass</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <style>
+    .scroll-list {
+      padding: 0;
+      margin-bottom: 20vh;
+    }
+    .scroll-list li {
+      background-color: #eee;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .scroll-list li:nth-child(2n) {
+      background-color: #e3e3e3;
+    }    
+    .scroll-list li::after {
+      margin-left: 1em;
+    }
+
+    .scroll-list li.is-inview::after {
+      content: 'is-inview';
+    }
+    .scroll-list li.is-inview.is-inview-done::after {
+      content: 'is-inview is-inview-done';
+    }    
+  </style>
+
+</head>
+<body class="">
+  <h1>inviewClass Development</h1>
+  <ul class="scroll-list">
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>    
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>
+    <li class="js-inview">is-not-inview </li>        
+  </ul>
+
+  <script src="./js/libs/jquery.min.js"></script>
+  <script src="./js/common.js"></script>
+
+</body>
+</html>
