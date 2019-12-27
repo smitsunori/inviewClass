@@ -9,7 +9,9 @@ Drafting...
  
 ## Usage
 - init
+```
 $('.your-item').inviewClass('is-inview');
+```
 
 
 
@@ -17,13 +19,13 @@ $('.your-item').inviewClass('is-inview');
 
 - offset
 - secondClassInterval
-
+```
 $('.your-item').inviewClass({
   className: 'is-inview' //set to change classname (optional)
   offset: 100, //px
   secondClassInterval: 1000 //ms
 });
-  
+```
 
 
 
