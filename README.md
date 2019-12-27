@@ -1,9 +1,9 @@
 # inviewClass
-addClass when elements enter
+addClass helper on scroll.
 
 
 ## Overview
-- add class when elements enter
+- add class when elements enter.
 - add second class on specified interval for reseting css will-change property.
 
  
