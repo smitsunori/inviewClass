@@ -1,32 +1,32 @@
 # inviewClass
-js scroll helper
+addClass when elements enter
 
-Drafting...
 
 ## Overview
-- add class when item enter
-  - add second class on defined interval
+- add class when elements enter
+- add second class on specified interval for reseting css will-change property.
+
  
 ## Usage
-- init
 ```
-$('.your-item').inviewClass('is-inview');
+$('.your-item').inviewClass();
 ```
-
 
 
 ### options
-
-- offset
-- secondClassInterval
 ```
 $('.your-item').inviewClass({
-  className: 'is-inview' //set to change classname (optional)
-  offset: 100, //px
-  secondClassInterval: 1000 //ms
+  className: 'is-inview',
+  secondClassName: 'is-inview-done',
+  visibleOffset: 200,
+  secondClassInterval: 1000
 });
 ```
 
 
+#### Dependencies
+jQuery 1.7+
 
 
+#### Licence
+MIT License

@@ -1,4 +1,3 @@
-
 (function($) {
 	$.fn.inviewClass = function(options){
 		
