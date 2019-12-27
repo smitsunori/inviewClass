@@ -1,49 +1,46 @@
-/* 
 
+(function($) {
+	$.fn.inviewClass = function(options){
+		
+		let settings = $.extend({
+			className: 'is-inview',
+			secondClassName: 'is-inview-done',
+			visibleOffset: 200,
+			secondClassInterval: 1000
+		}, options)
 
-
-*/
-const inviewClass = [];
-
-inviewClass.inview = function(){
-	let currentPos = pageYOffset,
-			inviewOffset = 200,
-			finishedInterval = 1000;
-
-
-	function inviewClass(){
-		currentPos = pageYOffset;
-		$('.js-inview').each(function(){
+		//here
+		return this.each(function(){
+			
 			let $this = $(this);
-			if(currentPos > $this.offset().top - window.innerHeight + inviewOffset){
-				if(!$this.hasClass('is-inview')){
-					$this.addClass('is-inview');
-					setTimeout(function(){
-						$this.addClass('is-inview-done');
-					}, finishedInterval);
+
+			function inviewClass(){
+				
+				currentPos = pageYOffset;
+				if(currentPos > $this.offset().top - window.innerHeight + settings.visibleOffset){
+					
+					if(!$this.hasClass(settings.className)){
+						$this.addClass(settings.className)
+						setTimeout(function(){
+							$this.addClass(settings.secondClassName);
+						}, settings.secondClassInterval);						
+					}
 				}
+
 			}
 
+			inviewClass();
 
-		})		
+			$(window).on('resize', function(){
+				inviewClass();
+			});
+
+			$(window).on('scroll', function(){
+				inviewClass();
+			});			
+		})
+
 	}
 
-	inviewClass()
 
-	$(window).on('resize', function(){
-		inviewClass()
-	});
-
-	$(window).on('scroll', function(){
-		inviewClass()
-	});	
-
-
-}
-
-
-$(document).ready(function(){
-  inviewClass.inview();
-});
-
-
+})(jQuery);
