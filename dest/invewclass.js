@@ -1,17 +1,16 @@
 (function($) {
 	$.fn.inviewClass = function(options){
 		
-		let settings = $.extend({
+		var settings = $.extend({
 			className: 'is-inview',
 			secondClassName: 'is-inview-done',
 			visibleOffset: 200,
 			secondClassInterval: 1000
-		}, options)
+		}, options);
 
-		//here
 		return this.each(function(){
 			
-			let $this = $(this);
+			var $this = $(this);
 
 			function inviewClass(){
 				
