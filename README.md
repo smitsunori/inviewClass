@@ -40,7 +40,7 @@ $('.your-item').inviewClass({
 - className: 画面内に要素が入った時に付与されるクラス名を指定します。
 - secondClassName: 指定時間経過後に付与されるクラス名を指定します。
 - visibleOffset: 画面内に要素が入ってからクラスが付与されるまでの距離をpxで指定します。
-- seconClassInterval: 指定時間経過後に付与されるクラスの時間をmsで指定します。
+- seconClassInterval: 最初クラスが付与されてから次のクラスが付与されるまでの時間をmsで指定します。
 
 
 
