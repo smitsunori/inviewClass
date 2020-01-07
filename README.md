@@ -1,10 +1,13 @@
 # inviewClass
-addClass helper on scroll.
+inviewClass is jQuery plugin that helps adding class on scroll.
 
 
 ## Overview
 - add class when elements enter.
 - add second class on specified interval for reseting css will-change property.
+
+- 要素が画面に入ったらクラスを付与します。
+- クラスを付与した後、指定した時間の経過後に別のクラスを付与します。will-changeプロパティの解除を目的としています。
 
 ## Demo
 https://smitsunori.github.io/inviewClass/
