@@ -6,6 +6,9 @@ addClass helper on scroll.
 - add class when elements enter.
 - add second class on specified interval for reseting css will-change property.
 
+## Demo
+https://smitsunori.github.io/inviewClass/
+
  
 ## Usage
 ```
