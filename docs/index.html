@@ -20,15 +20,13 @@
     }
 
     header {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
     }
-
-
 
     .scroll-list {
       padding: 0;
@@ -50,7 +48,6 @@
       margin-left: 1em;
     }
 
-
     .js-inview {
       transform: translateY(10px);
       opacity: 0;
@@ -67,7 +64,7 @@
     }
 
     .scroll-list li.is-inview.is-inview-done::after {
-      content: ' animation-finished';
+      content: 'animation-finished';
     }    
   </style>
 
@@ -109,7 +106,7 @@
   </main>
 
   <script src="//code.jquery.com/jquery-1.7.min.js"></script>
-  <script src="./js/inviewclass.js"></script>
+  <script src="./js/jquery.inviewclass.js"></script>
   <script>
     
     $(document).ready(function(){

@@ -14,11 +14,14 @@ gulp.task('browser-sync', function(done) {
 });
 
 //minify
-gulp.task('js-minify', function(done){
+gulp.task('file-sync', function(done){
     console.log('=========== minify ============');
+
+    gulp.src(['./dev/index.html'])
+        .pipe(gulp.dest('./docs/'))
     gulp.src(['./dev/js/*.js', '!./dev/js/*.min.js'])
         .pipe(gulp.dest('./dest/'))
-        .pipe(gulp.dest('./docs/'))
+        .pipe(gulp.dest('./docs/js'))
         .pipe(uglify())
         .pipe(rename({extname: '.min.js'}))
         .pipe(gulp.dest('./dest/'));
@@ -33,8 +36,8 @@ gulp.task('bs-reload', function (done) {
 
 //watch
 gulp.task('watch', gulp.series( gulp.parallel('browser-sync'), function () {
-    gulp.watch("./dev/*.html",      gulp.series('bs-reload', 'js-minify'));
-    gulp.watch("./dev/js/*.js",     gulp.series('bs-reload', 'js-minify'));
+    gulp.watch("./dev/*.html",      gulp.series('bs-reload', 'file-sync'));
+    gulp.watch("./dev/js/*.js",     gulp.series('bs-reload', 'file-sync'));
 }));
 
 gulp.task('default', gulp.series( 'watch', 'browser-sync'))
