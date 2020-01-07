@@ -9,16 +9,39 @@
     body {
       font-family: system-ui, sans-serif;
     }
+    .l-inner {
+      max-width: 1000px;
+      margin-right: auto;
+      margin-left: auto;      
+    }    
+    main {
+      display: block;
+      padding-top: 100px;
+    }
+
+    header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    }
+
+
+
     .scroll-list {
       padding: 0;
-      margin-bottom: 20vh;
+      max-width: 600px;
+      margin: 100px auto;
     }
     .scroll-list li {
       background-color: #eee;
-      height: 20vh;
+      height: 300px;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 30px;
     }
     .scroll-list li:nth-child(2n) {
       background-color: #e3e3e3;
@@ -27,35 +50,63 @@
       margin-left: 1em;
     }
 
-    .scroll-list li.is-inview::after {
-      content: 'is-inview';
+
+    .js-inview {
+      transform: translateY(10px);
+      opacity: 0;
+      transition: transform .8s ease-out, opacity .4s ease-out;
+      will-change: transform, opacity;
     }
+
+    .is-inview {
+      transform: translateY(0px);
+      opacity: 1;      
+    }
+    .is-inview.is-inview-done {
+      will-change: auto;
+    }
+
     .scroll-list li.is-inview.is-inview-done::after {
-      content: 'is-inview is-inview-done';
+      content: ' animation-finished';
     }    
   </style>
 
 </head>
 <body class="">
-  <h1>inviewClass Development</h1>
-  <ul class="scroll-list">
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>    
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>
-    <li class="js-inview">is-not-inview </li>        
-  </ul>
+  <header>
+    <div class="l-inner">
+      <h1>inviewClass Demo</h1>
+      <p>
+        要素が画面内に入るとクラスが付与され、その後指定した時間の経過後に別のクラスが付与されます。<br>
+
+        このデモでは画面内に入るとフェードインし、指定した時間の経過後に要素に指定していた will-change プロパティを解除しページ負荷を下げています。
+
+      </p>
+      <hr>
+    </div>
+  </header>
+
+  <main>  
+
+    <ul class="scroll-list">
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>    
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+      <li class="js-inview">inview-item </li>
+    </ul>
+  </main>
 
   <script src="//code.jquery.com/jquery-1.7.min.js"></script>
   <script src="./js/inviewclass.js"></script>

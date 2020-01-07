@@ -18,6 +18,7 @@ gulp.task('js-minify', function(done){
     console.log('=========== minify ============');
     gulp.src(['./dev/js/*.js', '!./dev/js/*.min.js'])
         .pipe(gulp.dest('./dest/'))
+        .pipe(gulp.dest('./docs/'))
         .pipe(uglify())
         .pipe(rename({extname: '.min.js'}))
         .pipe(gulp.dest('./dest/'));
