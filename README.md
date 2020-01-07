@@ -1,6 +1,6 @@
 # inviewClass
 inviewClass is jQuery plugin that helps adding class on scroll.<br>
-要素が画面内に入ったらクラスを付与する jQuery プラグインです。クラス付与後に別のクラスを付与できます。
+要素が画面内に入ったらクラスを付与する jQuery プラグインです。クラス付与後にさらに別のクラスを追加します。
 
 
 ## Overview
@@ -9,7 +9,7 @@ inviewClass is jQuery plugin that helps adding class on scroll.<br>
 
 
 - 要素が画面に入ったらクラスを付与します。
-- クラスを付与した後指定した時間の経過後に別のクラスを付与することで、will-changeプロパティの解除などが行えます。
+- クラスを付与した後指定した時間の経過後に別のクラスを追加することで、will-changeプロパティの解除などが行えます。
 
 ## Demo
 https://smitsunori.github.io/inviewClass/
@@ -40,7 +40,7 @@ $('.your-item').inviewClass({
 - className: 画面内に要素が入った時に付与されるクラス名を指定します。
 - secondClassName: 指定時間経過後に付与されるクラス名を指定します。
 - visibleOffset: 画面内に要素が入ってからクラスが付与されるまでの距離をpxで指定します。
-- seconClassInterval: 最初クラスが付与されてから次のクラスが付与されるまでの時間をmsで指定します。
+- seconClassInterval: 最初のクラスが付与されてから次のクラスが付与されるまでの時間をmsで指定します。
 
 
 
