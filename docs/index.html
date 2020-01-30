@@ -34,38 +34,25 @@
       margin: 200px auto;
     }
     .scroll-list li {
-      background-color: #eee;
+      
+      background-color: #77aade;
       height: 300px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 30px;
     }
-    .scroll-list li:nth-child(2n) {
-      background-color: #e3e3e3;
-    }    
     .scroll-list li::after {
       margin-left: 1em;
     }
-
-    .js-inview {
-      transform: translateY(10px);
-      opacity: 0;
-      transition: transform .8s ease-out, opacity .4s ease-out;
-      will-change: transform, opacity;
+    .scroll-list li.is-inview {
+      background-color: #72C89E;   
     }
-
-    .is-inview {
-      transform: translateY(0px);
-      opacity: 1;      
+    .scroll-list li.is-inview.is-inview-done {
+      background-color: #77aade;
+      background-color: #eee;
     }
-    .is-inview.is-inview-done {
-      will-change: auto;
-    }
-
-    .scroll-list li.is-inview.is-inview-done::after {
-      content: 'animation-finished';
-    }    
+    
   </style>
 
 </head>
@@ -73,10 +60,8 @@
   <header>
     <div class="l-inner">
       <h1>inviewClass Demo</h1>
-      <p>要素が画面内に入るとクラスが付与され、その後指定した時間の経過後に別のクラスが付与されます。</p>
-
-      <p>このデモでは要素が画面内に入るとフェードインし、その後要素に付与していたwill-changeプロパティを解除しています。<br>
-        不要になったwill-changeプロパティを解除することでページの負荷を下げ、ページの挙動を軽快に保ちます。</p>
+      <p>要素が画面内に入るとクラスが付与され、指定した時間の経過後に別のクラスが追加されます。</p>
+      <p>このデモでは緑のボックスが画面内に200px以上入ると青に変わり、1000ms経過後にグレーに変わります。</p>
 
       <p><a href="https://github.com/smitsunori/inviewClass">https://github.com/smitsunori/inviewClass</a></p>
       <hr>
@@ -86,22 +71,22 @@
   <main>  
 
     <ul class="scroll-list">
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>    
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
-      <li class="js-inview">inview-item </li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>    
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
+      <li class="js-inview"></li>
     </ul>
   </main>
 
