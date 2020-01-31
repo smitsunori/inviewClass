@@ -6,16 +6,14 @@ inviewClass is jQuery plugin that helps adding class on scroll.<br>
 ## Overview
 - add class when elements enter.
 - add second class on specified interval for reseting css will-change property.
-
-
 - 要素が画面に入ったらクラスを付与します。
 - クラスを付与した後指定した時間の経過後に別のクラスを追加します。
 
 ## Demo
 https://smitsunori.github.io/inviewClass/
 
-デモでは要素が画面内に入ると付与されるクラスのCSSでopacity, transformを操作し、下から動きつつフェードインさせています。
-will-changeを設定してフェードインをスムーズに動かしていますが、要素数が多いとwill-changeのメモリ消費が大きくページのカクツキの原因になったりします。そこで追加されるクラスを利用して不要になったwill-changeを随時解除し、ページ挙動を軽快に保っています。
+デモでは青のボックスが画面内に200px以上入ると赤に変わり、1000ms経過後にグレーに変わります。
+
  
 ## Usage
 Select elements to add class.<br>
@@ -46,6 +44,10 @@ $('.your-item').inviewClass({
 - seconClassInterval: 最初のクラスが付与されてから次のクラスが付与されるまでの時間をmsで指定します。
 
 
+### Example
+- remove css will-change property.
+- add another css animation.
+- or...
 
 #### Dependencies
 jQuery 1.7+
