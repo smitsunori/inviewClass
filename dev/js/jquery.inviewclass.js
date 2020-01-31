@@ -27,7 +27,7 @@
 						if(!isDisabled){
 							var thisTimeoutID = setTimeout(function(){
 								$this.addClass(settings.secondClassName);
-								clearTimeOut(thisTimeoutID);
+								clearTimeout(thisTimeoutID);
 							}, settings.secondClassInterval);													
 						}
 
