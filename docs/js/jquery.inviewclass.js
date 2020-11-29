@@ -1,7 +1,7 @@
 (function($) {
 	$.fn.inviewClass = function(options){
 		
-		var settings = $.extend({
+		let settings = $.extend({
 			className: 'is-inview',
 			secondClassName: 'is-inview-done',
 			visibleOffset: 200,
@@ -12,6 +12,8 @@
 		if(settings.SecondClassName === ''){
 			isDisabled = true;
 		}
+
+		var currentPos;
 
 		return this.each(function(){
 			
