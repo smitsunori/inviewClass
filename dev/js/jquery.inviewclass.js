@@ -1,7 +1,7 @@
 (function($) {
 	$.fn.inviewClass = function(options){
 		
-		let settings = $.extend({
+		var settings = $.extend({
 			className: 'is-inview',
 			secondClassName: 'is-inview-done',
 			visibleOffset: 200,
